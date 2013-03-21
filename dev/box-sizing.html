@@ -1,0 +1,157 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    
+      <title>CSS - box-sizing</title>
+    
+    <meta name="viewport" content="width=600">
+    <link rel="stylesheet" href="/css/style.css"/>
+    <link rel="stylesheet" href="/css/code.css"/>
+    <link href='http://fonts.googleapis.com/css?family=Bree+Serif' rel='stylesheet' type='text/css'>
+    <link rel="icon" type="image/png" href="/images/logo.png" />
+    <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-35945753-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+    </script>
+  </head>
+  <body>
+
+    <div id="logo">
+      <a href="/">
+        <img src="images/logo.png">
+        <span>Learn CSS Layout</span>
+      </a>
+    </div>
+
+    <div id="menu">
+      <a class="home-link" href="/">Home</a>
+      <a href="toc.html">Table of Contents</a>
+    </div>
+
+    <div id="container">
+
+      <h1 class="content">box-sizing</h1>
+
+      <style>
+  .simple {
+    width: 500px;
+    margin: 20px auto;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+
+  .fancy {
+    width: 500px;
+    margin: 20px auto;
+    padding: 50px;
+    border: solid #6AC5AC 10px;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+</style>
+
+<p class="content">
+  Over the generations, people realized that math is not fun, so a new CSS property called <code>box-sizing</code> was created. When you set <code>box-sizing: border-box;</code> on an element, the padding and border of that element no longer increase its width. Here is the same example as the previous page, but with <code>box-sizing: border-box;</code> on both elements:
+</p>
+
+<div class="highlight"><pre><code class="css"><span class="nc">.simple</span> <span class="p">{</span>
+  <span class="k">width</span><span class="o">:</span> <span class="m">500px</span><span class="p">;</span>
+  <span class="k">margin</span><span class="o">:</span> <span class="m">20px</span> <span class="k">auto</span><span class="p">;</span>
+  <span class="o">-</span><span class="n">webkit</span><span class="o">-</span><span class="n">box</span><span class="o">-</span><span class="n">sizing</span><span class="o">:</span> <span class="k">border</span><span class="o">-</span><span class="n">box</span><span class="p">;</span>
+     <span class="o">-</span><span class="n">moz</span><span class="o">-</span><span class="n">box</span><span class="o">-</span><span class="n">sizing</span><span class="o">:</span> <span class="k">border</span><span class="o">-</span><span class="n">box</span><span class="p">;</span>
+          <span class="n">box</span><span class="o">-</span><span class="n">sizing</span><span class="o">:</span> <span class="k">border</span><span class="o">-</span><span class="n">box</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.fancy</span> <span class="p">{</span>
+  <span class="k">width</span><span class="o">:</span> <span class="m">500px</span><span class="p">;</span>
+  <span class="k">margin</span><span class="o">:</span> <span class="m">20px</span> <span class="k">auto</span><span class="p">;</span>
+  <span class="k">padding</span><span class="o">:</span> <span class="m">50px</span><span class="p">;</span>
+  <span class="k">border</span><span class="o">:</span> <span class="k">solid</span> <span class="nb">blue</span> <span class="m">10px</span><span class="p">;</span>
+  <span class="o">-</span><span class="n">webkit</span><span class="o">-</span><span class="n">box</span><span class="o">-</span><span class="n">sizing</span><span class="o">:</span> <span class="k">border</span><span class="o">-</span><span class="n">box</span><span class="p">;</span>
+     <span class="o">-</span><span class="n">moz</span><span class="o">-</span><span class="n">box</span><span class="o">-</span><span class="n">sizing</span><span class="o">:</span> <span class="k">border</span><span class="o">-</span><span class="n">box</span><span class="p">;</span>
+          <span class="n">box</span><span class="o">-</span><span class="n">sizing</span><span class="o">:</span> <span class="k">border</span><span class="o">-</span><span class="n">box</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<div class="simple elem">
+  <span class="label">&lt;div class="simple"></span>
+  <p>
+    We're the same size now!
+  </p>
+  <span class="endlabel">&lt;/div></span>
+</div>
+
+<div class="fancy elem">
+  <span class="label">&lt;div class="fancy"></span>
+  <p>
+    Hooray!
+  </p>
+  <span class="endlabel">&lt;/div></span>
+</div>
+
+<p class="content">
+  Since this is so much better, some authors want all elements on all their pages to always work this way. Such authors put the following CSS on their pages:
+</p>
+
+<div class="highlight"><pre><code class="css"><span class="o">*</span> <span class="p">{</span>
+  <span class="o">-</span><span class="n">webkit</span><span class="o">-</span><span class="n">box</span><span class="o">-</span><span class="n">sizing</span><span class="o">:</span> <span class="k">border</span><span class="o">-</span><span class="n">box</span><span class="p">;</span>
+     <span class="o">-</span><span class="n">moz</span><span class="o">-</span><span class="n">box</span><span class="o">-</span><span class="n">sizing</span><span class="o">:</span> <span class="k">border</span><span class="o">-</span><span class="n">box</span><span class="p">;</span>
+          <span class="n">box</span><span class="o">-</span><span class="n">sizing</span><span class="o">:</span> <span class="k">border</span><span class="o">-</span><span class="n">box</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p class="content">
+  This ensures that all elements are always sized in this more intuitive way.
+</p>
+
+<p class="content">
+  Since <code>box-sizing</code> is pretty new, you should use the <code>-webkit-</code> and <code>-moz-</code> prefixes for now, as I have in these examples. This technique enables experimental features in specific browsers. Also, keep in mind that this one is <a href="http://caniuse.com/#search=box-sizing">IE8+</a>.
+</p>
+
+      <div class="nav-wrapper">
+
+        
+          <a class="nav prev" href="box-model.html">Previous</a>
+        
+
+        
+          <a class="nav next" href="position.html">Next</a>
+        
+
+      </div>
+
+      
+        <footer>
+          <a href="https://github.com/incompl/csslayoutsite/issues">Issues / Feedback</a>
+        </footer>
+      
+
+    </div>
+
+    <div id="share">
+      <div>
+        <a href="http://twitter.com/_gsmith">follow me</a> | <a href="http://training.bocoup.com/">training</a>
+      </div>
+      <li>
+        <iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Flearnlayout.com%2F&amp;send=false&amp;layout=button_count&amp;width=450&amp;show_faces=false&amp;font&amp;colorscheme=light&amp;action=like&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:110px; height:21px;" allowTransparency="true"></iframe>
+      </li>
+      <li>
+        <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://learnlayout.com/">Tweet</a>
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+      </li>
+    </div>
+
+  </body>
+</html>

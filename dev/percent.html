@@ -1,0 +1,185 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    
+      <title>CSS - percent width</title>
+    
+    <meta name="viewport" content="width=600">
+    <link rel="stylesheet" href="/css/style.css"/>
+    <link rel="stylesheet" href="/css/code.css"/>
+    <link href='http://fonts.googleapis.com/css?family=Bree+Serif' rel='stylesheet' type='text/css'>
+    <link rel="icon" type="image/png" href="/images/logo.png" />
+    <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-35945753-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+    </script>
+  </head>
+  <body>
+
+    <div id="logo">
+      <a href="/">
+        <img src="images/logo.png">
+        <span>Learn CSS Layout</span>
+      </a>
+    </div>
+
+    <div id="menu">
+      <a class="home-link" href="/">Home</a>
+      <a href="toc.html">Table of Contents</a>
+    </div>
+
+    <div id="container">
+
+      <h1 class="content">percent width</h1>
+
+      <p class="content">
+  Percent is a measurement unit relative to the containing block. It's great for images: here we make an image that is always 50% the width of its container. Try shrinking down the page to see what happens!
+</p>
+
+<style>
+  .clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+  }
+  article img {
+    float: right;
+    width: 50%;
+  }
+</style>
+
+<div class="highlight"><pre><code class="css"><span class="nt">article</span> <span class="nt">img</span> <span class="p">{</span>
+  <span class="k">float</span><span class="o">:</span> <span class="k">right</span><span class="p">;</span>
+  <span class="k">width</span><span class="o">:</span> <span class="m">50</span><span class="o">%</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<article class="elem elem-green content clearfix">
+  <span class="label">&lt;article class="clearfix"></span>
+  <img src="images/ilta.png" alt="an image">
+  <p>
+    You could even use <code>min-width</code> and <code>max-width</code> to limit how big or small the image can get!
+  </p>
+  <span class="endlabel">&lt;/article></span>
+</article>
+
+<div class="content">
+  <h2>percent width layout</h2>
+</div>
+
+<p class="content">
+  You can use percent for layout, but this can require more work. In this example, the <code>nav</code> content starts to wrap in a displeasing way when the window is too narrow. It comes down to what works for your content.
+</p>
+
+<style>
+  nav.elem {
+    float: left;
+    width: 25%;
+  }
+  section {
+    margin-left: 25%;
+  }
+</style>
+
+<div class="highlight"><pre><code class="css"><span class="nt">nav</span> <span class="p">{</span>
+  <span class="k">float</span><span class="o">:</span> <span class="k">left</span><span class="p">;</span>
+  <span class="k">width</span><span class="o">:</span> <span class="m">25</span><span class="o">%</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nt">section</span> <span class="p">{</span>
+  <span class="k">margin-left</span><span class="o">:</span> <span class="m">25</span><span class="o">%</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<div class="container elem">
+  <span class="label">&lt;div class="container"></span>
+
+  <nav class="elem elem-red">
+    <span class="label">&lt;nav></span>
+    <ul>
+      <li>
+        <a href="percent.html">Home</a>
+      </li>
+      <li>
+        <a href="percent.html">Taco Menu</a>
+      </li>
+      <li>
+        <a href="percent.html">Draft List</a>
+      </li>
+      <li>
+        <a href="percent.html">Hours</a>
+      </li>
+      <li>
+        <a href="percent.html">Directions</a>
+      </li>
+      <li>
+        <a href="percent.html">Contact</a>
+      </li>
+    </ul>
+    <span class="endlabel">&lt;/nav></span>
+  </nav>
+
+  <section class="elem elem-green">
+    <span class="label">&lt;section></span>
+    <p>
+      When this layout is too narrow, the <code>nav</code> gets squished. Worse, you can't use <code>min-width</code> on the nav to fix it, because the right column wouldn't respect it.
+    </p>
+    <span class="endlabel">&lt;/section></span>
+  </section>
+
+  <section class="elem elem-green ipsum">
+    <span class="label">&lt;section></span>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac leo purus. Mauris quis diam velit.
+    </p>
+    <span class="endlabel">&lt;/section></span>
+  </section>
+
+</div>
+
+      <div class="nav-wrapper">
+
+        
+          <a class="nav prev" href="float-layout.html">Previous</a>
+        
+
+        
+          <a class="nav next" href="media-queries.html">Next</a>
+        
+
+      </div>
+
+      
+        <footer>
+          <a href="https://github.com/incompl/csslayoutsite/issues">Issues / Feedback</a>
+        </footer>
+      
+
+    </div>
+
+    <div id="share">
+      <div>
+        <a href="http://twitter.com/_gsmith">follow me</a> | <a href="http://training.bocoup.com/">training</a>
+      </div>
+      <li>
+        <iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Flearnlayout.com%2F&amp;send=false&amp;layout=button_count&amp;width=450&amp;show_faces=false&amp;font&amp;colorscheme=light&amp;action=like&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:110px; height:21px;" allowTransparency="true"></iframe>
+      </li>
+      <li>
+        <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://learnlayout.com/">Tweet</a>
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+      </li>
+    </div>
+
+  </body>
+</html>

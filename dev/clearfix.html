@@ -1,0 +1,158 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    
+      <title>CSS - the clearfix hack</title>
+    
+    <meta name="viewport" content="width=600">
+    <link rel="stylesheet" href="/css/style.css"/>
+    <link rel="stylesheet" href="/css/code.css"/>
+    <link href='http://fonts.googleapis.com/css?family=Bree+Serif' rel='stylesheet' type='text/css'>
+    <link rel="icon" type="image/png" href="/images/logo.png" />
+    <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-35945753-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+    </script>
+  </head>
+  <body>
+
+    <div id="logo">
+      <a href="/">
+        <img src="images/logo.png">
+        <span>Learn CSS Layout</span>
+      </a>
+    </div>
+
+    <div id="menu">
+      <a class="home-link" href="/">Home</a>
+      <a href="toc.html">Table of Contents</a>
+    </div>
+
+    <div id="container">
+
+      <h1 class="content">the clearfix hack</h1>
+
+      <p class="content">
+  Here is a weird, bad thing that can sometimes happen when using floats:
+</p>
+
+<style>
+  .content img {
+    float: right;
+  }
+  .clear {
+    clear: both;
+  }
+</style>
+
+<div class="highlight"><pre><code class="css"><span class="nt">img</span> <span class="p">{</span>
+  <span class="k">float</span><span class="o">:</span> <span class="k">right</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<div class="content">
+
+  <div class="elem">
+    <span class="label">&lt;div></span>
+    <img src="/images/ilta.png" alt="An Image">
+    <p>
+      Uh oh... this image is taller than the element containing it, and it's floated, so it's overflowing outside of its container!
+    </p>
+  </div>
+
+</div>
+
+<p class="content clear">
+  Boo. There is a way to fix this, but it's ugly. It's called the <em>clearfix hack</em>.
+</p>
+
+<p class="content">
+  Let's try adding this new CSS:
+</p>
+
+<style>
+  .clearfix {
+    overflow: auto;
+  }
+</style>
+
+<div class="highlight"><pre><code class="css"><span class="nc">.clearfix</span> <span class="p">{</span>
+  <span class="k">overflow</span><span class="o">:</span> <span class="k">auto</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p class="content">
+  Now let's see what happens:
+</p>
+
+<div class="content">
+
+  <div class="elem clearfix">
+    <span class="label">&lt;div class="clearfix"></span>
+    <img src="/images/ilta.png" alt="An Image">
+    <p>
+      Much better!
+    </p>
+  </div>
+
+</div>
+
+<p class="content">
+  This works for modern browsers. If you want to support IE6 you will want to add the following:
+</p>
+
+<div class="highlight"><pre><code class="css"><span class="nc">.clearfix</span> <span class="p">{</span>
+  <span class="k">overflow</span><span class="o">:</span> <span class="k">auto</span><span class="p">;</span>
+  <span class="n">zoom</span><span class="o">:</span> <span class="m">1</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p class="content">
+  There are exotic browsers that may require extra attention. <a href="http://stackoverflow.com/questions/211383/which-method-of-clearfix-is-best">The world of clearfixing is pretty scary</a>, but this simple solution will work for the vast majority of browsers today.
+</p>
+
+      <div class="nav-wrapper">
+
+        
+          <a class="nav prev" href="clear.html">Previous</a>
+        
+
+        
+          <a class="nav next" href="float-layout.html">Next</a>
+        
+
+      </div>
+
+      
+        <footer>
+          <a href="https://github.com/incompl/csslayoutsite/issues">Issues / Feedback</a>
+        </footer>
+      
+
+    </div>
+
+    <div id="share">
+      <div>
+        <a href="http://twitter.com/_gsmith">follow me</a> | <a href="http://training.bocoup.com/">training</a>
+      </div>
+      <li>
+        <iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Flearnlayout.com%2F&amp;send=false&amp;layout=button_count&amp;width=450&amp;show_faces=false&amp;font&amp;colorscheme=light&amp;action=like&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:110px; height:21px;" allowTransparency="true"></iframe>
+      </li>
+      <li>
+        <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://learnlayout.com/">Tweet</a>
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+      </li>
+    </div>
+
+  </body>
+</html>

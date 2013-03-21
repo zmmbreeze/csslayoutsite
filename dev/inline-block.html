@@ -1,0 +1,338 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    
+      <title>CSS - inline-block</title>
+    
+    <meta name="viewport" content="width=600">
+    <link rel="stylesheet" href="/css/style.css"/>
+    <link rel="stylesheet" href="/css/code.css"/>
+    <link href='http://fonts.googleapis.com/css?family=Bree+Serif' rel='stylesheet' type='text/css'>
+    <link rel="icon" type="image/png" href="/images/logo.png" />
+    <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-35945753-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+    </script>
+  </head>
+  <body>
+
+    <div id="logo">
+      <a href="/">
+        <img src="images/logo.png">
+        <span>Learn CSS Layout</span>
+      </a>
+    </div>
+
+    <div id="menu">
+      <a class="home-link" href="/">Home</a>
+      <a href="toc.html">Table of Contents</a>
+    </div>
+
+    <div id="container">
+
+      <h1 class="content">inline-block</h1>
+
+      <p class="content">
+  You can create a grid of boxes that fills the browser width and wraps nicely. This has been possible for a long time using <code>float</code>, but now with <code>inline-block</code> it's even easier. Let's look at examples of both approaches.
+</p>
+
+<div class="content">
+  <h2>The Hard Way (using float)</h2>
+</div>
+
+<style>
+  .box {
+    float: left;
+    width: 200px;
+    height: 100px;
+    margin: 1em;
+  }
+  .after-box {
+    clear: left;
+  }
+</style>
+
+<div class="highlight"><pre><code class="css"><span class="nc">.box</span> <span class="p">{</span>
+  <span class="k">float</span><span class="o">:</span> <span class="k">left</span><span class="p">;</span>
+  <span class="k">width</span><span class="o">:</span> <span class="m">200px</span><span class="p">;</span>
+  <span class="k">height</span><span class="o">:</span> <span class="m">100px</span><span class="p">;</span>
+  <span class="k">margin</span><span class="o">:</span> <span class="m">1em</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nc">.after-box</span> <span class="p">{</span>
+  <span class="k">clear</span><span class="o">:</span> <span class="k">left</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p class="content">
+  
+    <div class="box elem">
+      <span class="label">&lt;div class="box"></span>
+      <p>
+        I'm floating!
+      </p>
+      <span class="endlabel">&lt;/div></span>
+    </div>
+  
+    <div class="box elem">
+      <span class="label">&lt;div class="box"></span>
+      <p>
+        I'm floating!
+      </p>
+      <span class="endlabel">&lt;/div></span>
+    </div>
+  
+    <div class="box elem">
+      <span class="label">&lt;div class="box"></span>
+      <p>
+        I'm floating!
+      </p>
+      <span class="endlabel">&lt;/div></span>
+    </div>
+  
+    <div class="box elem">
+      <span class="label">&lt;div class="box"></span>
+      <p>
+        I'm floating!
+      </p>
+      <span class="endlabel">&lt;/div></span>
+    </div>
+  
+    <div class="box elem">
+      <span class="label">&lt;div class="box"></span>
+      <p>
+        I'm floating!
+      </p>
+      <span class="endlabel">&lt;/div></span>
+    </div>
+  
+    <div class="box elem">
+      <span class="label">&lt;div class="box"></span>
+      <p>
+        I'm floating!
+      </p>
+      <span class="endlabel">&lt;/div></span>
+    </div>
+  
+    <div class="box elem">
+      <span class="label">&lt;div class="box"></span>
+      <p>
+        I'm floating!
+      </p>
+      <span class="endlabel">&lt;/div></span>
+    </div>
+  
+    <div class="box elem">
+      <span class="label">&lt;div class="box"></span>
+      <p>
+        I'm floating!
+      </p>
+      <span class="endlabel">&lt;/div></span>
+    </div>
+  
+    <div class="box elem">
+      <span class="label">&lt;div class="box"></span>
+      <p>
+        I'm floating!
+      </p>
+      <span class="endlabel">&lt;/div></span>
+    </div>
+  
+    <div class="box elem">
+      <span class="label">&lt;div class="box"></span>
+      <p>
+        I'm floating!
+      </p>
+      <span class="endlabel">&lt;/div></span>
+    </div>
+  
+    <div class="box elem">
+      <span class="label">&lt;div class="box"></span>
+      <p>
+        I'm floating!
+      </p>
+      <span class="endlabel">&lt;/div></span>
+    </div>
+  
+
+  <section class="elem elem-green after-box">
+    <span class="label">&lt;div class="after-box"></span>
+    <p>
+      I'm using clear so I don't float next to the above boxes.
+    </p>
+    <span class="endlabel">&lt;/div></span>
+  </section>
+</p>
+
+<div class="content">
+  <h2>The Easy Way (using inline-block)</h2>
+  <p>
+    You can achieve the same effect using the <code>inline-block</code> value of the <code>display</code> property.
+  </p>
+</div>
+
+<style>
+  .box2 {
+    display: inline-block;
+    width: 200px;
+    height: 100px;
+    margin: 1em;
+  }
+</style>
+
+<div class="highlight"><pre><code class="css"><span class="nc">.box2</span> <span class="p">{</span>
+  <span class="k">display</span><span class="o">:</span> <span class="k">inline</span><span class="o">-</span><span class="k">block</span><span class="p">;</span>
+  <span class="k">width</span><span class="o">:</span> <span class="m">200px</span><span class="p">;</span>
+  <span class="k">height</span><span class="o">:</span> <span class="m">100px</span><span class="p">;</span>
+  <span class="k">margin</span><span class="o">:</span> <span class="m">1em</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p class="content">
+  
+    <div class="box2 elem">
+      <span class="label">&lt;div class="box2"></span>
+      <p>
+        I'm an inline block!
+      </p>
+      <span class="endlabel">&lt;/div></span>
+    </div>
+  
+    <div class="box2 elem">
+      <span class="label">&lt;div class="box2"></span>
+      <p>
+        I'm an inline block!
+      </p>
+      <span class="endlabel">&lt;/div></span>
+    </div>
+  
+    <div class="box2 elem">
+      <span class="label">&lt;div class="box2"></span>
+      <p>
+        I'm an inline block!
+      </p>
+      <span class="endlabel">&lt;/div></span>
+    </div>
+  
+    <div class="box2 elem">
+      <span class="label">&lt;div class="box2"></span>
+      <p>
+        I'm an inline block!
+      </p>
+      <span class="endlabel">&lt;/div></span>
+    </div>
+  
+    <div class="box2 elem">
+      <span class="label">&lt;div class="box2"></span>
+      <p>
+        I'm an inline block!
+      </p>
+      <span class="endlabel">&lt;/div></span>
+    </div>
+  
+    <div class="box2 elem">
+      <span class="label">&lt;div class="box2"></span>
+      <p>
+        I'm an inline block!
+      </p>
+      <span class="endlabel">&lt;/div></span>
+    </div>
+  
+    <div class="box2 elem">
+      <span class="label">&lt;div class="box2"></span>
+      <p>
+        I'm an inline block!
+      </p>
+      <span class="endlabel">&lt;/div></span>
+    </div>
+  
+    <div class="box2 elem">
+      <span class="label">&lt;div class="box2"></span>
+      <p>
+        I'm an inline block!
+      </p>
+      <span class="endlabel">&lt;/div></span>
+    </div>
+  
+    <div class="box2 elem">
+      <span class="label">&lt;div class="box2"></span>
+      <p>
+        I'm an inline block!
+      </p>
+      <span class="endlabel">&lt;/div></span>
+    </div>
+  
+    <div class="box2 elem">
+      <span class="label">&lt;div class="box2"></span>
+      <p>
+        I'm an inline block!
+      </p>
+      <span class="endlabel">&lt;/div></span>
+    </div>
+  
+    <div class="box2 elem">
+      <span class="label">&lt;div class="box2"></span>
+      <p>
+        I'm an inline block!
+      </p>
+      <span class="endlabel">&lt;/div></span>
+    </div>
+  
+
+  <section class="elem elem-green">
+    <span class="label">&lt;div></span>
+    <p>
+      I don't have to use <code>clear</code> in this case. Nice!
+    </p>
+    <span class="endlabel">&lt;/div></span>
+  </section>
+</p>
+
+<p class="content">
+  You have to do extra work for <a href="http://blog.mozilla.org/webdev/2009/02/20/cross-browser-inline-block/">IE6 and IE7 support</a> of <code>inline-block</code>. Sometimes people talk about <code>inline-block</code> triggering something called <code>hasLayout</code>, though you only need to know about that to support old browsers. Follow the previous link about IE6 and IE7 support if you're curious to learn more. Otherwise, let's continue.
+</p>
+
+      <div class="nav-wrapper">
+
+        
+          <a class="nav prev" href="media-queries.html">Previous</a>
+        
+
+        
+          <a class="nav next" href="inline-block-layout.html">Next</a>
+        
+
+      </div>
+
+      
+        <footer>
+          <a href="https://github.com/incompl/csslayoutsite/issues">Issues / Feedback</a>
+        </footer>
+      
+
+    </div>
+
+    <div id="share">
+      <div>
+        <a href="http://twitter.com/_gsmith">follow me</a> | <a href="http://training.bocoup.com/">training</a>
+      </div>
+      <li>
+        <iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Flearnlayout.com%2F&amp;send=false&amp;layout=button_count&amp;width=450&amp;show_faces=false&amp;font&amp;colorscheme=light&amp;action=like&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:110px; height:21px;" allowTransparency="true"></iframe>
+      </li>
+      <li>
+        <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://learnlayout.com/">Tweet</a>
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+      </li>
+    </div>
+
+  </body>
+</html>

@@ -1,0 +1,136 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    
+      <title>CSS - the box model</title>
+    
+    <meta name="viewport" content="width=600">
+    <link rel="stylesheet" href="/css/style.css"/>
+    <link rel="stylesheet" href="/css/code.css"/>
+    <link href='http://fonts.googleapis.com/css?family=Bree+Serif' rel='stylesheet' type='text/css'>
+    <link rel="icon" type="image/png" href="/images/logo.png" />
+    <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-35945753-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+    </script>
+  </head>
+  <body>
+
+    <div id="logo">
+      <a href="/">
+        <img src="images/logo.png">
+        <span>Learn CSS Layout</span>
+      </a>
+    </div>
+
+    <div id="menu">
+      <a class="home-link" href="/">Home</a>
+      <a href="toc.html">Table of Contents</a>
+    </div>
+
+    <div id="container">
+
+      <h1 class="content">the box model</h1>
+
+      <style>
+  .simple {
+    width: 500px;
+    margin: 20px auto;
+    -webkit-box-sizing: content-box;
+       -moz-box-sizing: content-box;
+            box-sizing: content-box;
+  }
+
+  .fancy {
+    width: 500px;
+    margin: 20px auto;
+    padding: 50px;
+    border: solid #6AC5AC 10px;
+    -webkit-box-sizing: content-box;
+       -moz-box-sizing: content-box;
+            box-sizing: content-box;
+  }
+</style>
+
+<p class="content">
+  While we're talking about width, we should talk about width's big caveat: the <em>box model</em>. When you set the width of an element, the element can actually appear bigger than what you set: the element's border and padding will stretch out the element beyond the specified width. Look at the following example, where two elements with the same width value end up different sizes in the result.
+</p>
+
+<div class="highlight"><pre><code class="css"><span class="nc">.simple</span> <span class="p">{</span>
+  <span class="k">width</span><span class="o">:</span> <span class="m">500px</span><span class="p">;</span>
+  <span class="k">margin</span><span class="o">:</span> <span class="m">20px</span> <span class="k">auto</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.fancy</span> <span class="p">{</span>
+  <span class="k">width</span><span class="o">:</span> <span class="m">500px</span><span class="p">;</span>
+  <span class="k">margin</span><span class="o">:</span> <span class="m">20px</span> <span class="k">auto</span><span class="p">;</span>
+  <span class="k">padding</span><span class="o">:</span> <span class="m">50px</span><span class="p">;</span>
+  <span class="k">border</span><span class="o">:</span> <span class="k">solid</span> <span class="nb">blue</span> <span class="m">10px</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<div class="simple elem">
+  <span class="label">&lt;div class="simple"></span>
+  <p>
+    I'm smaller...
+  </p>
+  <span class="endlabel">&lt;/div></span>
+</div>
+
+<div class="fancy elem">
+  <span class="label">&lt;div class="fancy"></span>
+  <p>
+    And I'm bigger!
+  </p>
+  <span class="endlabel">&lt;/div></span>
+</div>
+
+<p class="content">
+  For generations, the solution to this problem has been math. CSS authors have always just written a smaller width value than what they wanted, subtracting out the padding and border. Thankfully, you don't have to do that anymore...
+</p>
+
+      <div class="nav-wrapper">
+
+        
+          <a class="nav prev" href="max-width.html">Previous</a>
+        
+
+        
+          <a class="nav next" href="box-sizing.html">Next</a>
+        
+
+      </div>
+
+      
+        <footer>
+          <a href="https://github.com/incompl/csslayoutsite/issues">Issues / Feedback</a>
+        </footer>
+      
+
+    </div>
+
+    <div id="share">
+      <div>
+        <a href="http://twitter.com/_gsmith">follow me</a> | <a href="http://training.bocoup.com/">training</a>
+      </div>
+      <li>
+        <iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Flearnlayout.com%2F&amp;send=false&amp;layout=button_count&amp;width=450&amp;show_faces=false&amp;font&amp;colorscheme=light&amp;action=like&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:110px; height:21px;" allowTransparency="true"></iframe>
+      </li>
+      <li>
+        <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://learnlayout.com/">Tweet</a>
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+      </li>
+    </div>
+
+  </body>
+</html>
