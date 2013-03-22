@@ -6,8 +6,8 @@
       <title>CSS - inline-block</title>
     
     <meta name="viewport" content="width=600">
-    <link rel="stylesheet" href="/css/style.css"/>
-    <link rel="stylesheet" href="/css/code.css"/>
+    <link rel="stylesheet" href="./css/style.css"/>
+    <link rel="stylesheet" href="./css/code.css"/>
     <link href='http://fonts.googleapis.com/css?family=Bree+Serif' rel='stylesheet' type='text/css'>
     <link rel="icon" type="image/png" href="/images/logo.png" />
     <script type="text/javascript">
@@ -24,18 +24,18 @@
 
     </script>
   </head>
-  <body>
+  <body class="ltr">
 
     <div id="logo">
       <a href="/">
         <img src="images/logo.png">
-        <span>Learn CSS Layout</span>
+        <span>学习CSS布局</span>
       </a>
     </div>
 
     <div id="menu">
-      <a class="home-link" href="/">Home</a>
-      <a href="toc.html">Table of Contents</a>
+      <a class="home-link" href="/">主页</a>
+      <a href="toc.html">目录</a>
     </div>
 
     <div id="container">
@@ -43,11 +43,11 @@
       <h1 class="content">inline-block</h1>
 
       <p class="content">
-  You can create a grid of boxes that fills the browser width and wraps nicely. This has been possible for a long time using <code>float</code>, but now with <code>inline-block</code> it's even easier. Let's look at examples of both approaches.
+  你可以创建很多网格来铺满浏览器。在过去很长的一段时间内使用 <code>float</code> 是一种选择，但是使用 <code>inline-block</code> 会让它变得更简单。让我们看下使用这两种方法的例子：
 </p>
 
 <div class="content">
-  <h2>The Hard Way (using float)</h2>
+  <h2>困难的方式（使用浮动）</h2>
 </div>
 
 <style>
@@ -78,7 +78,7 @@
     <div class="box elem">
       <span class="label">&lt;div class="box"></span>
       <p>
-        I'm floating!
+        我在浮动！
       </p>
       <span class="endlabel">&lt;/div></span>
     </div>
@@ -86,7 +86,7 @@
     <div class="box elem">
       <span class="label">&lt;div class="box"></span>
       <p>
-        I'm floating!
+        我在浮动！
       </p>
       <span class="endlabel">&lt;/div></span>
     </div>
@@ -94,7 +94,7 @@
     <div class="box elem">
       <span class="label">&lt;div class="box"></span>
       <p>
-        I'm floating!
+        我在浮动！
       </p>
       <span class="endlabel">&lt;/div></span>
     </div>
@@ -102,7 +102,7 @@
     <div class="box elem">
       <span class="label">&lt;div class="box"></span>
       <p>
-        I'm floating!
+        我在浮动！
       </p>
       <span class="endlabel">&lt;/div></span>
     </div>
@@ -110,7 +110,7 @@
     <div class="box elem">
       <span class="label">&lt;div class="box"></span>
       <p>
-        I'm floating!
+        我在浮动！
       </p>
       <span class="endlabel">&lt;/div></span>
     </div>
@@ -118,7 +118,7 @@
     <div class="box elem">
       <span class="label">&lt;div class="box"></span>
       <p>
-        I'm floating!
+        我在浮动！
       </p>
       <span class="endlabel">&lt;/div></span>
     </div>
@@ -126,7 +126,7 @@
     <div class="box elem">
       <span class="label">&lt;div class="box"></span>
       <p>
-        I'm floating!
+        我在浮动！
       </p>
       <span class="endlabel">&lt;/div></span>
     </div>
@@ -134,7 +134,7 @@
     <div class="box elem">
       <span class="label">&lt;div class="box"></span>
       <p>
-        I'm floating!
+        我在浮动！
       </p>
       <span class="endlabel">&lt;/div></span>
     </div>
@@ -142,7 +142,7 @@
     <div class="box elem">
       <span class="label">&lt;div class="box"></span>
       <p>
-        I'm floating!
+        我在浮动！
       </p>
       <span class="endlabel">&lt;/div></span>
     </div>
@@ -150,7 +150,7 @@
     <div class="box elem">
       <span class="label">&lt;div class="box"></span>
       <p>
-        I'm floating!
+        我在浮动！
       </p>
       <span class="endlabel">&lt;/div></span>
     </div>
@@ -158,7 +158,7 @@
     <div class="box elem">
       <span class="label">&lt;div class="box"></span>
       <p>
-        I'm floating!
+        我在浮动！
       </p>
       <span class="endlabel">&lt;/div></span>
     </div>
@@ -167,16 +167,16 @@
   <section class="elem elem-green after-box">
     <span class="label">&lt;div class="after-box"></span>
     <p>
-      I'm using clear so I don't float next to the above boxes.
+      我在使用clear，所以我不能浮动上面那个盒子的旁边。
     </p>
     <span class="endlabel">&lt;/div></span>
   </section>
 </p>
 
 <div class="content">
-  <h2>The Easy Way (using inline-block)</h2>
+  <h2>容易的方式（使用inline-block）</h2>
   <p>
-    You can achieve the same effect using the <code>inline-block</code> value of the <code>display</code> property.
+    你可以用 <code>display</code> 属性的值 <code>inline-block</code> 来实现相同效果。
   </p>
 </div>
 
@@ -202,7 +202,7 @@
     <div class="box2 elem">
       <span class="label">&lt;div class="box2"></span>
       <p>
-        I'm an inline block!
+        我是inline block！
       </p>
       <span class="endlabel">&lt;/div></span>
     </div>
@@ -210,7 +210,7 @@
     <div class="box2 elem">
       <span class="label">&lt;div class="box2"></span>
       <p>
-        I'm an inline block!
+        我是inline block！
       </p>
       <span class="endlabel">&lt;/div></span>
     </div>
@@ -218,7 +218,7 @@
     <div class="box2 elem">
       <span class="label">&lt;div class="box2"></span>
       <p>
-        I'm an inline block!
+        我是inline block！
       </p>
       <span class="endlabel">&lt;/div></span>
     </div>
@@ -226,7 +226,7 @@
     <div class="box2 elem">
       <span class="label">&lt;div class="box2"></span>
       <p>
-        I'm an inline block!
+        我是inline block！
       </p>
       <span class="endlabel">&lt;/div></span>
     </div>
@@ -234,7 +234,7 @@
     <div class="box2 elem">
       <span class="label">&lt;div class="box2"></span>
       <p>
-        I'm an inline block!
+        我是inline block！
       </p>
       <span class="endlabel">&lt;/div></span>
     </div>
@@ -242,7 +242,7 @@
     <div class="box2 elem">
       <span class="label">&lt;div class="box2"></span>
       <p>
-        I'm an inline block!
+        我是inline block！
       </p>
       <span class="endlabel">&lt;/div></span>
     </div>
@@ -250,7 +250,7 @@
     <div class="box2 elem">
       <span class="label">&lt;div class="box2"></span>
       <p>
-        I'm an inline block!
+        我是inline block！
       </p>
       <span class="endlabel">&lt;/div></span>
     </div>
@@ -258,7 +258,7 @@
     <div class="box2 elem">
       <span class="label">&lt;div class="box2"></span>
       <p>
-        I'm an inline block!
+        我是inline block！
       </p>
       <span class="endlabel">&lt;/div></span>
     </div>
@@ -266,7 +266,7 @@
     <div class="box2 elem">
       <span class="label">&lt;div class="box2"></span>
       <p>
-        I'm an inline block!
+        我是inline block！
       </p>
       <span class="endlabel">&lt;/div></span>
     </div>
@@ -274,7 +274,7 @@
     <div class="box2 elem">
       <span class="label">&lt;div class="box2"></span>
       <p>
-        I'm an inline block!
+        我是inline block！
       </p>
       <span class="endlabel">&lt;/div></span>
     </div>
@@ -282,7 +282,7 @@
     <div class="box2 elem">
       <span class="label">&lt;div class="box2"></span>
       <p>
-        I'm an inline block!
+        我是inline block！
       </p>
       <span class="endlabel">&lt;/div></span>
     </div>
@@ -291,40 +291,37 @@
   <section class="elem elem-green">
     <span class="label">&lt;div></span>
     <p>
-      I don't have to use <code>clear</code> in this case. Nice!
+      这次我可没有用 <code>clear</code> 。太棒了！
     </p>
     <span class="endlabel">&lt;/div></span>
   </section>
 </p>
 
 <p class="content">
-  You have to do extra work for <a href="http://blog.mozilla.org/webdev/2009/02/20/cross-browser-inline-block/">IE6 and IE7 support</a> of <code>inline-block</code>. Sometimes people talk about <code>inline-block</code> triggering something called <code>hasLayout</code>, though you only need to know about that to support old browsers. Follow the previous link about IE6 and IE7 support if you're curious to learn more. Otherwise, let's continue.
+  你必须要做些额外的功课来让<a href="http://blog.mozilla.org/webdev/2009/02/20/cross-browser-inline-block/">IE6和IE7支持</a> <code>inline-block</code> 。有些时候人们谈到 <code>inline-block</code> 会触发叫做 <code>hasLayout</code> 东西，你只需要知道那是用来支持旧浏览器的。如果你对此很感兴趣，可以在前面那个链接中找到更详细的信息。否则我们就继续下去吧。
 </p>
 
       <div class="nav-wrapper">
 
         
-          <a class="nav prev" href="media-queries.html">Previous</a>
+          <a class="nav prev" href="media-queries.html">前一页</a>
         
 
         
-          <a class="nav next" href="inline-block-layout.html">Next</a>
+          <a class="nav next" href="inline-block-layout.html">下一页</a>
         
 
       </div>
 
       
         <footer>
-          <a href="https://github.com/incompl/csslayoutsite/issues">Issues / Feedback</a>
+          <a href="https://github.com/incompl/csslayoutsite/issues">意见 / 反馈</a>
         </footer>
       
 
     </div>
 
     <div id="share">
-      <div>
-        <a href="http://twitter.com/_gsmith">follow me</a> | <a href="http://training.bocoup.com/">training</a>
-      </div>
       <li>
         <iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Flearnlayout.com%2F&amp;send=false&amp;layout=button_count&amp;width=450&amp;show_faces=false&amp;font&amp;colorscheme=light&amp;action=like&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:110px; height:21px;" allowTransparency="true"></iframe>
       </li>

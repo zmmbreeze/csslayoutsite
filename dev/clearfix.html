@@ -3,11 +3,11 @@
   <head>
     <meta charset="utf-8">
     
-      <title>CSS - the clearfix hack</title>
+      <title>CSS - 清除浮动（clearfix hack）</title>
     
     <meta name="viewport" content="width=600">
-    <link rel="stylesheet" href="/css/style.css"/>
-    <link rel="stylesheet" href="/css/code.css"/>
+    <link rel="stylesheet" href="./css/style.css"/>
+    <link rel="stylesheet" href="./css/code.css"/>
     <link href='http://fonts.googleapis.com/css?family=Bree+Serif' rel='stylesheet' type='text/css'>
     <link rel="icon" type="image/png" href="/images/logo.png" />
     <script type="text/javascript">
@@ -24,26 +24,26 @@
 
     </script>
   </head>
-  <body>
+  <body class="ltr">
 
     <div id="logo">
       <a href="/">
         <img src="images/logo.png">
-        <span>Learn CSS Layout</span>
+        <span>学习CSS布局</span>
       </a>
     </div>
 
     <div id="menu">
-      <a class="home-link" href="/">Home</a>
-      <a href="toc.html">Table of Contents</a>
+      <a class="home-link" href="/">主页</a>
+      <a href="toc.html">目录</a>
     </div>
 
     <div id="container">
 
-      <h1 class="content">the clearfix hack</h1>
+      <h1 class="content">清除浮动（clearfix hack）</h1>
 
       <p class="content">
-  Here is a weird, bad thing that can sometimes happen when using floats:
+  在使用浮动的时候经常会遇到一个古怪的事情：
 </p>
 
 <style>
@@ -66,18 +66,18 @@
     <span class="label">&lt;div></span>
     <img src="/images/ilta.png" alt="An Image">
     <p>
-      Uh oh... this image is taller than the element containing it, and it's floated, so it's overflowing outside of its container!
+      不......这个图片比包含它的元素还高。并且它是浮动的，它溢出到了容器外面！
     </p>
   </div>
 
 </div>
 
 <p class="content clear">
-  Boo. There is a way to fix this, but it's ugly. It's called the <em>clearfix hack</em>.
+  见证奇迹的时刻到了！有一种比较丑陋的方法可以解决这个问题，它叫做<em>清除浮动（clearfix hack）</em>.
 </p>
 
 <p class="content">
-  Let's try adding this new CSS:
+  让我们加入一些新的CSS样式：
 </p>
 
 <style>
@@ -92,7 +92,7 @@
 </code></pre></div>
 
 <p class="content">
-  Now let's see what happens:
+  现在再看看发生了什么：
 </p>
 
 <div class="content">
@@ -101,14 +101,14 @@
     <span class="label">&lt;div class="clearfix"></span>
     <img src="/images/ilta.png" alt="An Image">
     <p>
-      Much better!
+      好多了！
     </p>
   </div>
 
 </div>
 
 <p class="content">
-  This works for modern browsers. If you want to support IE6 you will want to add the following:
+  这个可以在现代浏览器上工作。如果你想要支持IE6，你就需要再加入如下样式：
 </p>
 
 <div class="highlight"><pre><code class="css"><span class="nc">.clearfix</span> <span class="p">{</span>
@@ -118,33 +118,30 @@
 </code></pre></div>
 
 <p class="content">
-  There are exotic browsers that may require extra attention. <a href="http://stackoverflow.com/questions/211383/which-method-of-clearfix-is-best">The world of clearfixing is pretty scary</a>, but this simple solution will work for the vast majority of browsers today.
+  有很多各种各样的浏览器需要“额外的关照”。<a href="http://stackoverflow.com/questions/211383/which-method-of-clearfix-is-best">清除浮动这谭水很深很深</a>，但是这个简单的解决方案已经可以在今天所有的主要浏览器上工作。
 </p>
 
       <div class="nav-wrapper">
 
         
-          <a class="nav prev" href="clear.html">Previous</a>
+          <a class="nav prev" href="clear.html">前一页</a>
         
 
         
-          <a class="nav next" href="float-layout.html">Next</a>
+          <a class="nav next" href="float-layout.html">下一页</a>
         
 
       </div>
 
       
         <footer>
-          <a href="https://github.com/incompl/csslayoutsite/issues">Issues / Feedback</a>
+          <a href="https://github.com/incompl/csslayoutsite/issues">意见 / 反馈</a>
         </footer>
       
 
     </div>
 
     <div id="share">
-      <div>
-        <a href="http://twitter.com/_gsmith">follow me</a> | <a href="http://training.bocoup.com/">training</a>
-      </div>
       <li>
         <iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Flearnlayout.com%2F&amp;send=false&amp;layout=button_count&amp;width=450&amp;show_faces=false&amp;font&amp;colorscheme=light&amp;action=like&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:110px; height:21px;" allowTransparency="true"></iframe>
       </li>

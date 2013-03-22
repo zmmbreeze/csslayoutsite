@@ -6,8 +6,8 @@
       <title>CSS - clear</title>
     
     <meta name="viewport" content="width=600">
-    <link rel="stylesheet" href="/css/style.css"/>
-    <link rel="stylesheet" href="/css/code.css"/>
+    <link rel="stylesheet" href="./css/style.css"/>
+    <link rel="stylesheet" href="./css/code.css"/>
     <link href='http://fonts.googleapis.com/css?family=Bree+Serif' rel='stylesheet' type='text/css'>
     <link rel="icon" type="image/png" href="/images/logo.png" />
     <script type="text/javascript">
@@ -24,18 +24,18 @@
 
     </script>
   </head>
-  <body>
+  <body class="ltr">
 
     <div id="logo">
       <a href="/">
         <img src="images/logo.png">
-        <span>Learn CSS Layout</span>
+        <span>学习CSS布局</span>
       </a>
     </div>
 
     <div id="menu">
-      <a class="home-link" href="/">Home</a>
-      <a href="toc.html">Table of Contents</a>
+      <a class="home-link" href="/">主页</a>
+      <a href="toc.html">目录</a>
     </div>
 
     <div id="container">
@@ -43,7 +43,7 @@
       <h1 class="content">clear</h1>
 
       <p class="content">
-  The <code>clear</code> property is important for controlling the behavior of floats. Compare these two examples:
+   <code>clear</code> 属性被用于控制浮动。比较下面两个例子：
 </p>
 
 <style>
@@ -71,7 +71,7 @@
   <div class="box elem">
     <span class="label">&lt;div class="box"></span>
     <p>
-      I feel like I'm floating!
+      我感觉好像我在漂浮！
     </p>
     <span class="endlabel">&lt;/div></span>
   </div>
@@ -80,7 +80,7 @@
   <section class="elem elem-green">
     <span class="label">&lt;section></span>
     <p>
-      In this case, the <code>section</code> element is actually after the <code>div</code>. However, since the <code>div</code> is floated to the left, this is what happens: the text in the <code>section</code> is floated around the <code>div</code> and the <code>section</code> surrounds the whole thing. What if we wanted the <code>section</code> to actually appear after the floated element?
+      在这个例子中， <code>section</code> 元素实际上是在 <code>div</code> 之后的（译注：DOM结构上）。然而 <code>div</code> 元素是浮动到左边的，于是 <code>section</code> 中的文字就围绕了 <code>div</code> ，并且 <code>section</code> 元素包围了整个元素。如果我们想让 <code>section</code> 显示在浮动元素之后呢？
     </p>
     <span class="endlabel">&lt;/section></span>
   </section>
@@ -107,7 +107,7 @@
   <div class="box elem">
     <span class="label">&lt;div class="box"></span>
     <p>
-      I feel like I'm floating!
+      我感觉好像我在漂浮！
     </p>
     <span class="endlabel">&lt;/div></span>
   </div>
@@ -115,7 +115,7 @@
   <section class="elem elem-green after-box">
     <span class="label">&lt;section class="after-box"></span>
     <p>
-      Using <code>clear</code> we have now moved this section down below the floated <code>div</code>. You use the value <code>left</code> to clear elements floated to the left. You can also clear <code>right</code> and <code>both</code>.
+      使用 <code>clear</code> 我们就可以将这个段落移动到浮动元素 <code>div</code> 下面。你需要用 <code>left</code> 值才能清除元素的向左浮动。你还可以用 <code>right</code> 或 <code>both</code> 来清除向右浮动或同时清除向左向右浮动。
     </p>
     <span class="endlabel">&lt;/section></span>
   </section>
@@ -124,27 +124,24 @@
       <div class="nav-wrapper">
 
         
-          <a class="nav prev" href="float.html">Previous</a>
+          <a class="nav prev" href="float.html">前一页</a>
         
 
         
-          <a class="nav next" href="clearfix.html">Next</a>
+          <a class="nav next" href="clearfix.html">下一页</a>
         
 
       </div>
 
       
         <footer>
-          <a href="https://github.com/incompl/csslayoutsite/issues">Issues / Feedback</a>
+          <a href="https://github.com/incompl/csslayoutsite/issues">意见 / 反馈</a>
         </footer>
       
 
     </div>
 
     <div id="share">
-      <div>
-        <a href="http://twitter.com/_gsmith">follow me</a> | <a href="http://training.bocoup.com/">training</a>
-      </div>
       <li>
         <iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Flearnlayout.com%2F&amp;send=false&amp;layout=button_count&amp;width=450&amp;show_faces=false&amp;font&amp;colorscheme=light&amp;action=like&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:110px; height:21px;" allowTransparency="true"></iframe>
       </li>

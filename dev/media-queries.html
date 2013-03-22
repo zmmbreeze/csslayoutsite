@@ -6,8 +6,8 @@
       <title>CSS - media queries</title>
     
     <meta name="viewport" content="width=600">
-    <link rel="stylesheet" href="/css/style.css"/>
-    <link rel="stylesheet" href="/css/code.css"/>
+    <link rel="stylesheet" href="./css/style.css"/>
+    <link rel="stylesheet" href="./css/code.css"/>
     <link href='http://fonts.googleapis.com/css?family=Bree+Serif' rel='stylesheet' type='text/css'>
     <link rel="icon" type="image/png" href="/images/logo.png" />
     <script type="text/javascript">
@@ -24,18 +24,18 @@
 
     </script>
   </head>
-  <body>
+  <body class="ltr">
 
     <div id="logo">
       <a href="/">
         <img src="images/logo.png">
-        <span>Learn CSS Layout</span>
+        <span>学习CSS布局</span>
       </a>
     </div>
 
     <div id="menu">
-      <a class="home-link" href="/">Home</a>
-      <a href="toc.html">Table of Contents</a>
+      <a class="home-link" href="/">主页</a>
+      <a href="toc.html">目录</a>
     </div>
 
     <div id="container">
@@ -43,11 +43,11 @@
       <h1 class="content">media queries</h1>
 
       <p class="content">
-  "Responsive Design" is the strategy of making a site that "responds" to the browser and device that it is being shown on... by looking awesome no matter what.
+  “可响应式设计（Responsive Design）”是一种让网站针对不同的浏览器和设备“响应”不同显示效果的策略，这样可以让网站在任何情况下显示的很棒！
 </p>
 
 <p class="content">
-  Media queries are the most powerful tool for doing this. Let's take our layout that uses percent widths and have it display in one column when the browser is too small to fit the menu in the sidebar:
+  Media queries是做此事所需的最强大的工具。让我们使用之前的百分比宽度布局，然后在浏览器变窄到无法容纳侧边栏菜单时把它们都显示成一列：
 </p>
 
 <style>
@@ -114,7 +114,7 @@
   <section class="elem elem-green">
     <span class="label">&lt;section></span>
     <p>
-      Now when you resize your browser it's even cooler than ever!
+      当你调整浏览器窗口大小时，它变得更加酷了！
     </p>
     <span class="endlabel">&lt;/section></span>
   </section>
@@ -130,40 +130,37 @@
 </div>
 
 <p class="content">
-  Tada! Now our layout looks great even on mobile browsers. Here are <a href="http://mediaqueri.es/">some popular sites that use media queries this way</a>. There is a whole lot more you can detect than <code>min-width</code> and <code>max-width</code>: check out <a href="https://developer.mozilla.org/en-US/docs/CSS/Media_queries">the MDN documentation</a> to learn more.
+  现在我们的布局在移动浏览器上也显示的很棒。这里有一些<a href="http://mediaqueri.es/">像这样使用了media queries的著名站点</a>。在<a href="https://developer.mozilla.org/en-US/docs/CSS/Media_queries">MDN文档</a>中你还可以学到更多media queries相关的知识。
 </p>
 
 <div class="content">
-  <h2>extra credit</h2>
+  <h2>额外加分点</h2>
   <p>
-    You can make your layout look even better on mobile using <a href="http://dev.opera.com/articles/view/an-introduction-to-meta-viewport-and-viewport/">meta viewport</a>.
+    使用<a href="http://dev.opera.com/articles/view/an-introduction-to-meta-viewport-and-viewport/">meta viewport</a>之后可以让你的布局在移动浏览器上显示的更好。
   </p>
 </div>
 
       <div class="nav-wrapper">
 
         
-          <a class="nav prev" href="percent.html">Previous</a>
+          <a class="nav prev" href="percent.html">前一页</a>
         
 
         
-          <a class="nav next" href="inline-block.html">Next</a>
+          <a class="nav next" href="inline-block.html">下一页</a>
         
 
       </div>
 
       
         <footer>
-          <a href="https://github.com/incompl/csslayoutsite/issues">Issues / Feedback</a>
+          <a href="https://github.com/incompl/csslayoutsite/issues">意见 / 反馈</a>
         </footer>
       
 
     </div>
 
     <div id="share">
-      <div>
-        <a href="http://twitter.com/_gsmith">follow me</a> | <a href="http://training.bocoup.com/">training</a>
-      </div>
       <li>
         <iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Flearnlayout.com%2F&amp;send=false&amp;layout=button_count&amp;width=450&amp;show_faces=false&amp;font&amp;colorscheme=light&amp;action=like&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:110px; height:21px;" allowTransparency="true"></iframe>
       </li>

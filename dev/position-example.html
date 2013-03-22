@@ -3,11 +3,11 @@
   <head>
     <meta charset="utf-8">
     
-      <title>CSS - position example</title>
+      <title>CSS - position例子</title>
     
     <meta name="viewport" content="width=600">
-    <link rel="stylesheet" href="/css/style.css"/>
-    <link rel="stylesheet" href="/css/code.css"/>
+    <link rel="stylesheet" href="./css/style.css"/>
+    <link rel="stylesheet" href="./css/code.css"/>
     <link href='http://fonts.googleapis.com/css?family=Bree+Serif' rel='stylesheet' type='text/css'>
     <link rel="icon" type="image/png" href="/images/logo.png" />
     <script type="text/javascript">
@@ -24,26 +24,26 @@
 
     </script>
   </head>
-  <body>
+  <body class="ltr">
 
     <div id="logo">
       <a href="/">
         <img src="images/logo.png">
-        <span>Learn CSS Layout</span>
+        <span>学习CSS布局</span>
       </a>
     </div>
 
     <div id="menu">
-      <a class="home-link" href="/">Home</a>
-      <a href="toc.html">Table of Contents</a>
+      <a class="home-link" href="/">主页</a>
+      <a href="toc.html">目录</a>
     </div>
 
     <div id="container">
 
-      <h1 class="content">position example</h1>
+      <h1 class="content">position例子</h1>
 
       <p class="content">
-  This position stuff might make a little more sense in a practical example. Below is a realistic page layout.
+  通过具体的例子可以帮助我们更好地理解“position”。下面是一个真正的页面布局。
 </p>
 
 <style>
@@ -130,7 +130,7 @@
   <section class="elem elem-green">
     <span class="label">&lt;section></span>
     <p>
-      The <code>margin-left</code> style for <code>section</code>s makes sure there is room for the <code>nav</code>.
+       <code>section</code> s的 <code>margin-left</code> 样式确保了有足够的空间容纳 <code>nav</code> 元素。
     </p>
     <span class="endlabel">&lt;/section></span>
   </section>
@@ -146,7 +146,7 @@
   <section class="elem elem-green">
     <span class="label">&lt;section></span>
     <p>
-      Notice what happens when you resize your browser. It works nicely!
+      注意当你调整浏览器窗口时发生了什么。效果很赞！
     </p>
     <span class="endlabel">&lt;/section></span>
   </section>
@@ -154,7 +154,7 @@
   <footer class="elem elem-orange">
     <span class="label">&lt;footer></span>
     <p>
-      If you use a fixed header or footer, make sure there is room for it! I put a <code>margin-bottom</code> on the <code>body</code>.
+      如果你使用了一个固定定位的头部和底部，确保有足够的空间来显示它们！我在 <code>body</code> 上面加了 <code>margin-bottom</code> 。
     </p>
     <span class="endlabel">&lt;/footer></span>
   </footer>
@@ -162,33 +162,30 @@
 </div>
 
 <p class="content">
-  This example works because the container is taller than the nav. If it wasn't, the nav would overflow outside of its container. In the coming pages we'll discuss other layout techniques that have different pros and cons.
+  这个例子在容器比nav元素高的时候可以正常工作。如果容器比nav元素低，那么nav会溢出到容器的外面。之后我们会讨论下其他布局技术，它们都各有优劣。
 </p>
 
       <div class="nav-wrapper">
 
         
-          <a class="nav prev" href="position.html">Previous</a>
+          <a class="nav prev" href="position.html">前一页</a>
         
 
         
-          <a class="nav next" href="float.html">Next</a>
+          <a class="nav next" href="float.html">下一页</a>
         
 
       </div>
 
       
         <footer>
-          <a href="https://github.com/incompl/csslayoutsite/issues">Issues / Feedback</a>
+          <a href="https://github.com/incompl/csslayoutsite/issues">意见 / 反馈</a>
         </footer>
       
 
     </div>
 
     <div id="share">
-      <div>
-        <a href="http://twitter.com/_gsmith">follow me</a> | <a href="http://training.bocoup.com/">training</a>
-      </div>
       <li>
         <iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Flearnlayout.com%2F&amp;send=false&amp;layout=button_count&amp;width=450&amp;show_faces=false&amp;font&amp;colorscheme=light&amp;action=like&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:110px; height:21px;" allowTransparency="true"></iframe>
       </li>

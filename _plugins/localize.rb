@@ -9,7 +9,7 @@ module Jekyll
 
     def render(context)
       @lang = context.registers[:site].config['lang']
-      @translations = YAML::load(File.open("translations/#{@lang}.yaml"))
+      @translations = YAML::load(File.open("translations/zh.yaml"))
       @init = true
 
       if @key[0..3] == 'page'

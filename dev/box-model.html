@@ -3,11 +3,11 @@
   <head>
     <meta charset="utf-8">
     
-      <title>CSS - the box model</title>
+      <title>CSS - 盒模型</title>
     
     <meta name="viewport" content="width=600">
-    <link rel="stylesheet" href="/css/style.css"/>
-    <link rel="stylesheet" href="/css/code.css"/>
+    <link rel="stylesheet" href="./css/style.css"/>
+    <link rel="stylesheet" href="./css/code.css"/>
     <link href='http://fonts.googleapis.com/css?family=Bree+Serif' rel='stylesheet' type='text/css'>
     <link rel="icon" type="image/png" href="/images/logo.png" />
     <script type="text/javascript">
@@ -24,23 +24,23 @@
 
     </script>
   </head>
-  <body>
+  <body class="ltr">
 
     <div id="logo">
       <a href="/">
         <img src="images/logo.png">
-        <span>Learn CSS Layout</span>
+        <span>学习CSS布局</span>
       </a>
     </div>
 
     <div id="menu">
-      <a class="home-link" href="/">Home</a>
-      <a href="toc.html">Table of Contents</a>
+      <a class="home-link" href="/">主页</a>
+      <a href="toc.html">目录</a>
     </div>
 
     <div id="container">
 
-      <h1 class="content">the box model</h1>
+      <h1 class="content">盒模型</h1>
 
       <style>
   .simple {
@@ -63,7 +63,7 @@
 </style>
 
 <p class="content">
-  While we're talking about width, we should talk about width's big caveat: the <em>box model</em>. When you set the width of an element, the element can actually appear bigger than what you set: the element's border and padding will stretch out the element beyond the specified width. Look at the following example, where two elements with the same width value end up different sizes in the result.
+  在我们讨论宽度的时候，我们应该讲下与它相关的一个重点知识：<em>盒模型</em>。当你设置了元素的宽度，元素有时候表现的比你设置的值还要更宽。因为元素的边框和内边距会撑开元素。看下面的例子，两个相同宽度的元素显示的实际宽度却不一样。
 </p>
 
 <div class="highlight"><pre><code class="css"><span class="nc">.simple</span> <span class="p">{</span>
@@ -82,7 +82,7 @@
 <div class="simple elem">
   <span class="label">&lt;div class="simple"></span>
   <p>
-    I'm smaller...
+    我小一些...
   </p>
   <span class="endlabel">&lt;/div></span>
 </div>
@@ -90,39 +90,36 @@
 <div class="fancy elem">
   <span class="label">&lt;div class="fancy"></span>
   <p>
-    And I'm bigger!
+    我比它大！
   </p>
   <span class="endlabel">&lt;/div></span>
 </div>
 
 <p class="content">
-  For generations, the solution to this problem has been math. CSS authors have always just written a smaller width value than what they wanted, subtracting out the padding and border. Thankfully, you don't have to do that anymore...
+  以前有一个代代相传的解决方案是数学。CSS开发者需要用比他们实际想要的宽度小一点的宽度，需要减去内边距和边框的宽度。值得庆幸地是你不需要再这么做了...
 </p>
 
       <div class="nav-wrapper">
 
         
-          <a class="nav prev" href="max-width.html">Previous</a>
+          <a class="nav prev" href="max-width.html">前一页</a>
         
 
         
-          <a class="nav next" href="box-sizing.html">Next</a>
+          <a class="nav next" href="box-sizing.html">下一页</a>
         
 
       </div>
 
       
         <footer>
-          <a href="https://github.com/incompl/csslayoutsite/issues">Issues / Feedback</a>
+          <a href="https://github.com/incompl/csslayoutsite/issues">意见 / 反馈</a>
         </footer>
       
 
     </div>
 
     <div id="share">
-      <div>
-        <a href="http://twitter.com/_gsmith">follow me</a> | <a href="http://training.bocoup.com/">training</a>
-      </div>
       <li>
         <iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Flearnlayout.com%2F&amp;send=false&amp;layout=button_count&amp;width=450&amp;show_faces=false&amp;font&amp;colorscheme=light&amp;action=like&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:110px; height:21px;" allowTransparency="true"></iframe>
       </li>

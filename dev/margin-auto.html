@@ -6,8 +6,8 @@
       <title>CSS - margin: auto;</title>
     
     <meta name="viewport" content="width=600">
-    <link rel="stylesheet" href="/css/style.css"/>
-    <link rel="stylesheet" href="/css/code.css"/>
+    <link rel="stylesheet" href="./css/style.css"/>
+    <link rel="stylesheet" href="./css/code.css"/>
     <link href='http://fonts.googleapis.com/css?family=Bree+Serif' rel='stylesheet' type='text/css'>
     <link rel="icon" type="image/png" href="/images/logo.png" />
     <script type="text/javascript">
@@ -24,18 +24,18 @@
 
     </script>
   </head>
-  <body>
+  <body class="ltr">
 
     <div id="logo">
       <a href="/">
         <img src="images/logo.png">
-        <span>Learn CSS Layout</span>
+        <span>学习CSS布局</span>
       </a>
     </div>
 
     <div id="menu">
-      <a class="home-link" href="/">Home</a>
-      <a href="toc.html">Table of Contents</a>
+      <a class="home-link" href="/">主页</a>
+      <a href="toc.html">目录</a>
     </div>
 
     <div id="container">
@@ -58,10 +58,10 @@
 <div id="main" class="elem">
   <span class="label">&lt;div id="main"></span>
   <p>
-    Setting the <code>width</code> of a block-level element will prevent it from stretching out to the edges of its container to the left and right. Then, you can set the left and right margins to <code>auto</code> to horizontally center that element within its container. The element will take up the width you specify, then the remaining space will be split evenly between the two margins.
+    设置块级元素的 <code>width</code> 可以阻止它从左到右撑满容器。然后你就可以设置左右外边距为 <code>auto</code> 来使其水平居中。元素会占据你所指定的宽度，然后剩余的宽度会一分为二成为左右外边距。
   </p>
   <p>
-    The only problem occurs when the browser window is narrower than the width of your element. The browser resolves this by creating a horizontal scrollbar on the page. Let's improve the situation...
+    唯一的问题是，当浏览器窗口比元素的宽度还要窄时，浏览器会显示一个水平滚动条来容纳页面。让我们再来改进下这个方案...
   </p>
   <span class="endlabel">&lt;/div></span>
 </div>
@@ -69,27 +69,24 @@
       <div class="nav-wrapper">
 
         
-          <a class="nav prev" href="display.html">Previous</a>
+          <a class="nav prev" href="display.html">前一页</a>
         
 
         
-          <a class="nav next" href="max-width.html">Next</a>
+          <a class="nav next" href="max-width.html">下一页</a>
         
 
       </div>
 
       
         <footer>
-          <a href="https://github.com/incompl/csslayoutsite/issues">Issues / Feedback</a>
+          <a href="https://github.com/incompl/csslayoutsite/issues">意见 / 反馈</a>
         </footer>
       
 
     </div>
 
     <div id="share">
-      <div>
-        <a href="http://twitter.com/_gsmith">follow me</a> | <a href="http://training.bocoup.com/">training</a>
-      </div>
       <li>
         <iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Flearnlayout.com%2F&amp;send=false&amp;layout=button_count&amp;width=450&amp;show_faces=false&amp;font&amp;colorscheme=light&amp;action=like&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:110px; height:21px;" allowTransparency="true"></iframe>
       </li>

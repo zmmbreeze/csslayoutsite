@@ -6,8 +6,8 @@
       <title>CSS - box-sizing</title>
     
     <meta name="viewport" content="width=600">
-    <link rel="stylesheet" href="/css/style.css"/>
-    <link rel="stylesheet" href="/css/code.css"/>
+    <link rel="stylesheet" href="./css/style.css"/>
+    <link rel="stylesheet" href="./css/code.css"/>
     <link href='http://fonts.googleapis.com/css?family=Bree+Serif' rel='stylesheet' type='text/css'>
     <link rel="icon" type="image/png" href="/images/logo.png" />
     <script type="text/javascript">
@@ -24,18 +24,18 @@
 
     </script>
   </head>
-  <body>
+  <body class="ltr">
 
     <div id="logo">
       <a href="/">
         <img src="images/logo.png">
-        <span>Learn CSS Layout</span>
+        <span>学习CSS布局</span>
       </a>
     </div>
 
     <div id="menu">
-      <a class="home-link" href="/">Home</a>
-      <a href="toc.html">Table of Contents</a>
+      <a class="home-link" href="/">主页</a>
+      <a href="toc.html">目录</a>
     </div>
 
     <div id="container">
@@ -63,7 +63,7 @@
 </style>
 
 <p class="content">
-  Over the generations, people realized that math is not fun, so a new CSS property called <code>box-sizing</code> was created. When you set <code>box-sizing: border-box;</code> on an element, the padding and border of that element no longer increase its width. Here is the same example as the previous page, but with <code>box-sizing: border-box;</code> on both elements:
+  经过了一代又一代人们意识到数学不好玩，所以一个新的CSS属性被创造出来。它叫做 <code>box-sizing</code> 。当你设置一个元素为 <code>box-sizing: border-box;</code> 时，此元素的内边距和边框不再会增加它的宽度。这里有一个与前一页相同的例子，唯一的区别是两个元素都设置了 <code>box-sizing: border-box;</code> ：
 </p>
 
 <div class="highlight"><pre><code class="css"><span class="nc">.simple</span> <span class="p">{</span>
@@ -88,7 +88,7 @@
 <div class="simple elem">
   <span class="label">&lt;div class="simple"></span>
   <p>
-    We're the same size now!
+    我们现在一样大小了！
   </p>
   <span class="endlabel">&lt;/div></span>
 </div>
@@ -96,13 +96,13 @@
 <div class="fancy elem">
   <span class="label">&lt;div class="fancy"></span>
   <p>
-    Hooray!
+    万岁！
   </p>
   <span class="endlabel">&lt;/div></span>
 </div>
 
 <p class="content">
-  Since this is so much better, some authors want all elements on all their pages to always work this way. Such authors put the following CSS on their pages:
+  既然没有比这更好的方法，一些CSS开发者想要页面上所有的元素都有如此表现。所以开发者们把以下CSS代码放在他们页面上：
 </p>
 
 <div class="highlight"><pre><code class="css"><span class="o">*</span> <span class="p">{</span>
@@ -113,37 +113,34 @@
 </code></pre></div>
 
 <p class="content">
-  This ensures that all elements are always sized in this more intuitive way.
+  这样可以确保所有的元素都会用这种更直观的方式排版。
 </p>
 
 <p class="content">
-  Since <code>box-sizing</code> is pretty new, you should use the <code>-webkit-</code> and <code>-moz-</code> prefixes for now, as I have in these examples. This technique enables experimental features in specific browsers. Also, keep in mind that this one is <a href="http://caniuse.com/#search=box-sizing">IE8+</a>.
+  既然 <code>box-sizing</code> 是个很新的属性，目前你还应该像我之前在例子中那样使用 <code>-webkit-</code> 和 <code>-moz-</code> 前缀。这可以启用特定浏览器实验中的特性。同时记住它是支持<a href="http://caniuse.com/#search=box-sizing">IE8+</a>。
 </p>
 
       <div class="nav-wrapper">
 
         
-          <a class="nav prev" href="box-model.html">Previous</a>
+          <a class="nav prev" href="box-model.html">前一页</a>
         
 
         
-          <a class="nav next" href="position.html">Next</a>
+          <a class="nav next" href="position.html">下一页</a>
         
 
       </div>
 
       
         <footer>
-          <a href="https://github.com/incompl/csslayoutsite/issues">Issues / Feedback</a>
+          <a href="https://github.com/incompl/csslayoutsite/issues">意见 / 反馈</a>
         </footer>
       
 
     </div>
 
     <div id="share">
-      <div>
-        <a href="http://twitter.com/_gsmith">follow me</a> | <a href="http://training.bocoup.com/">training</a>
-      </div>
       <li>
         <iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Flearnlayout.com%2F&amp;send=false&amp;layout=button_count&amp;width=450&amp;show_faces=false&amp;font&amp;colorscheme=light&amp;action=like&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:110px; height:21px;" allowTransparency="true"></iframe>
       </li>

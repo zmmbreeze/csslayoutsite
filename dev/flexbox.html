@@ -6,8 +6,8 @@
       <title>CSS - flexbox</title>
     
     <meta name="viewport" content="width=600">
-    <link rel="stylesheet" href="/css/style.css"/>
-    <link rel="stylesheet" href="/css/code.css"/>
+    <link rel="stylesheet" href="./css/style.css"/>
+    <link rel="stylesheet" href="./css/code.css"/>
     <link href='http://fonts.googleapis.com/css?family=Bree+Serif' rel='stylesheet' type='text/css'>
     <link rel="icon" type="image/png" href="/images/logo.png" />
     <script type="text/javascript">
@@ -24,18 +24,18 @@
 
     </script>
   </head>
-  <body>
+  <body class="ltr">
 
     <div id="logo">
       <a href="/">
         <img src="images/logo.png">
-        <span>Learn CSS Layout</span>
+        <span>学习CSS布局</span>
       </a>
     </div>
 
     <div id="menu">
-      <a class="home-link" href="/">Home</a>
-      <a href="toc.html">Table of Contents</a>
+      <a class="home-link" href="/">主页</a>
+      <a href="toc.html">目录</a>
     </div>
 
     <div id="container">
@@ -43,18 +43,18 @@
       <h1 class="content">flexbox</h1>
 
       <p class="content">
-  The new <code>flexbox</code> layout mode is poised to redefine how we do layouts in CSS. Unfortunately the specification has changed a lot recently, so it's implemented differently in different browsers. Still, I'd like to share a couple examples so you know what's coming up. These examples currently only work in the Chrome flexbox implementation, based on the <a href="http://www.w3.org/TR/css3-flexbox/">latest version of the standard</a>.
+  新的 <code>flexbox</code> 布局模式被用来重新定义CSS中的布局方式。不幸地是最近标准发生了很大的变化，所以它在不同的浏览器中实现方式不一样。不过我仍旧想要分享一些例子，来让你知道即将发生的改变。这些例子目前只能在支持flexbox的Chrome浏览器中运行，基于<a href="http://www.w3.org/TR/css3-flexbox/">最新的标准</a>。
 </p>
 
 <p class="content">
-  There are a lot of out-of-date flexbox resources around. If you want to learn more about flexbox, <a href="http://css-tricks.com/old-flexbox-and-new-flexbox/">start here</a> to learn how to identify if a resource is current or not. I have written a <a href="http://weblog.bocoup.com/dive-into-flexbox/">detailed article using the latest syntax</a>.
+  有很多过时的flexbox相关资源，如果你想要了解更多，<a href="http://css-tricks.com/old-flexbox-and-new-flexbox/">从这里</a>可以知道是否资源已经过时。我已经写了一份<a href="http://weblog.bocoup.com/dive-into-flexbox/">详细的关于最新标准的文章</a>。
 </p>
 
 <p class="content">
-  There is a lot more you can do with flexbox; these are just a few examples to give you an idea:
+  使用flexbox你还可以做的更多；这里只是一些让你了解概念的例子：
 </p>
 
-<h2 class="content">Simple Layout using Flexbox</h2>
+<h2 class="content">使用Flexbox的简单布局</h2>
 
 <style>
   .container {
@@ -117,7 +117,7 @@
     <section class="elem elem-green">
       <span class="label">&lt;section></span>
       <p>
-        Flexbox is so easy!
+        Flexbox好容易使用！
       </p>
       <span class="endlabel">&lt;/section></span>
     </section>
@@ -135,7 +135,7 @@
 
 </div>
 
-<h2 class="content">Fancy Layout using Flexbox</h2>
+<h2 class="content">使用Flexbox的牛逼布局</h2>
 
 <style>
 .initial {
@@ -189,7 +189,7 @@
   <section class="elem elem-green initial">
     <span class="label">&lt;div class="initial"></span>
     <p>
-      I will be 200px when there is room, and I will shrink down to 100px if there is not room, but no smaller.
+      我的宽度是200px，并且在空间变小时我会变窄到100px，不过不会再窄了。
     </p>
     <span class="endlabel">&lt;/div></span>
   </section>
@@ -197,7 +197,7 @@
   <section class="elem elem-green none">
     <span class="label">&lt;div class="none"></span>
     <p>
-      I will always be 200px, no matter what.
+      不论发生什么事情，我的宽度一直是200px。
     </p>
     <span class="endlabel">&lt;/div></span>
   </section>
@@ -205,7 +205,7 @@
   <section class="elem elem-green flex1">
     <span class="label">&lt;div class="flex1"></span>
     <p>
-      I will fill up 1/3 of the remaining width.
+      我会占满剩余宽度的1/3。
     </p>
     <span class="endlabel">&lt;/div></span>
   </section>
@@ -213,14 +213,14 @@
   <section class="elem elem-green flex2">
     <span class="label">&lt;div class="flex2"></span>
     <p>
-      I will fill up 2/3 of the remaining width.
+      我会占满剩余宽度的2/3。
     </p>
     <span class="endlabel">&lt;/div></span>
   </section>
 
 </div>
 
-<h2 class="content">Centering using Flexbox</h2>
+<h2 class="content">使用Flexbox的居中布局</h2>
 
 <style>
 .vertical-container {
@@ -249,7 +249,7 @@
   <section class="elem elem-green vertically-centered">
     <span class="label">&lt;div class="vertically-centered"></span>
     <p>
-      Finally, it's easy to vertically center something in CSS!
+      终于在CSS中有一种简单垂直居中布局的方法了！
     </p>
     <span class="endlabel">&lt;/div></span>
   </section>
@@ -260,27 +260,24 @@
       <div class="nav-wrapper">
 
         
-          <a class="nav prev" href="column.html">Previous</a>
+          <a class="nav prev" href="column.html">前一页</a>
         
 
         
-          <a class="nav next" href="frameworks.html">Next</a>
+          <a class="nav next" href="frameworks.html">下一页</a>
         
 
       </div>
 
       
         <footer>
-          <a href="https://github.com/incompl/csslayoutsite/issues">Issues / Feedback</a>
+          <a href="https://github.com/incompl/csslayoutsite/issues">意见 / 反馈</a>
         </footer>
       
 
     </div>
 
     <div id="share">
-      <div>
-        <a href="http://twitter.com/_gsmith">follow me</a> | <a href="http://training.bocoup.com/">training</a>
-      </div>
       <li>
         <iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Flearnlayout.com%2F&amp;send=false&amp;layout=button_count&amp;width=450&amp;show_faces=false&amp;font&amp;colorscheme=light&amp;action=like&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:110px; height:21px;" allowTransparency="true"></iframe>
       </li>

@@ -3,11 +3,11 @@
   <head>
     <meta charset="utf-8">
     
-      <title>CSS - percent width</title>
+      <title>CSS - 百分比宽度</title>
     
     <meta name="viewport" content="width=600">
-    <link rel="stylesheet" href="/css/style.css"/>
-    <link rel="stylesheet" href="/css/code.css"/>
+    <link rel="stylesheet" href="./css/style.css"/>
+    <link rel="stylesheet" href="./css/code.css"/>
     <link href='http://fonts.googleapis.com/css?family=Bree+Serif' rel='stylesheet' type='text/css'>
     <link rel="icon" type="image/png" href="/images/logo.png" />
     <script type="text/javascript">
@@ -24,26 +24,26 @@
 
     </script>
   </head>
-  <body>
+  <body class="ltr">
 
     <div id="logo">
       <a href="/">
         <img src="images/logo.png">
-        <span>Learn CSS Layout</span>
+        <span>学习CSS布局</span>
       </a>
     </div>
 
     <div id="menu">
-      <a class="home-link" href="/">Home</a>
-      <a href="toc.html">Table of Contents</a>
+      <a class="home-link" href="/">主页</a>
+      <a href="toc.html">目录</a>
     </div>
 
     <div id="container">
 
-      <h1 class="content">percent width</h1>
+      <h1 class="content">百分比宽度</h1>
 
       <p class="content">
-  Percent is a measurement unit relative to the containing block. It's great for images: here we make an image that is always 50% the width of its container. Try shrinking down the page to see what happens!
+  百分比是一种相对与包含块的计量单位。它对图片很有用：如下我们实现了图片宽度始终是容器宽度的50%。尝试下调整页面的宽度看下效果！
 </p>
 
 <style>
@@ -70,17 +70,17 @@
   <span class="label">&lt;article class="clearfix"></span>
   <img src="images/ilta.png" alt="an image">
   <p>
-    You could even use <code>min-width</code> and <code>max-width</code> to limit how big or small the image can get!
+    你应该同时使用 <code>min-width</code> 和 <code>max-width</code> 来限制图片的最大最小宽度！
   </p>
   <span class="endlabel">&lt;/article></span>
 </article>
 
 <div class="content">
-  <h2>percent width layout</h2>
+  <h2>百分比宽度布局</h2>
 </div>
 
 <p class="content">
-  You can use percent for layout, but this can require more work. In this example, the <code>nav</code> content starts to wrap in a displeasing way when the window is too narrow. It comes down to what works for your content.
+  你可以用百分比做布局，但是这需要更多的工作。在下面的例子中，当窗口宽度很窄时 <code>nav</code> 的内容会以一种不太友好的方式被包裹起来。总而言之，选一种最合适你的内容的方式。
 </p>
 
 <style>
@@ -133,7 +133,7 @@
   <section class="elem elem-green">
     <span class="label">&lt;section></span>
     <p>
-      When this layout is too narrow, the <code>nav</code> gets squished. Worse, you can't use <code>min-width</code> on the nav to fix it, because the right column wouldn't respect it.
+      当布局很窄时， <code>nav</code> 好像被压扁了一样。更糟糕的是，你不能在nav上使用 <code>min-width</code> 来修复这个问题，因为右边的那列是不会遵守它的。
     </p>
     <span class="endlabel">&lt;/section></span>
   </section>
@@ -151,27 +151,24 @@
       <div class="nav-wrapper">
 
         
-          <a class="nav prev" href="float-layout.html">Previous</a>
+          <a class="nav prev" href="float-layout.html">前一页</a>
         
 
         
-          <a class="nav next" href="media-queries.html">Next</a>
+          <a class="nav next" href="media-queries.html">下一页</a>
         
 
       </div>
 
       
         <footer>
-          <a href="https://github.com/incompl/csslayoutsite/issues">Issues / Feedback</a>
+          <a href="https://github.com/incompl/csslayoutsite/issues">意见 / 反馈</a>
         </footer>
       
 
     </div>
 
     <div id="share">
-      <div>
-        <a href="http://twitter.com/_gsmith">follow me</a> | <a href="http://training.bocoup.com/">training</a>
-      </div>
       <li>
         <iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Flearnlayout.com%2F&amp;send=false&amp;layout=button_count&amp;width=450&amp;show_faces=false&amp;font&amp;colorscheme=light&amp;action=like&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:110px; height:21px;" allowTransparency="true"></iframe>
       </li>

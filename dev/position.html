@@ -6,8 +6,8 @@
       <title>CSS - position</title>
     
     <meta name="viewport" content="width=600">
-    <link rel="stylesheet" href="/css/style.css"/>
-    <link rel="stylesheet" href="/css/code.css"/>
+    <link rel="stylesheet" href="./css/style.css"/>
+    <link rel="stylesheet" href="./css/code.css"/>
     <link href='http://fonts.googleapis.com/css?family=Bree+Serif' rel='stylesheet' type='text/css'>
     <link rel="icon" type="image/png" href="/images/logo.png" />
     <script type="text/javascript">
@@ -24,18 +24,18 @@
 
     </script>
   </head>
-  <body>
+  <body class="ltr">
 
     <div id="logo">
       <a href="/">
         <img src="images/logo.png">
-        <span>Learn CSS Layout</span>
+        <span>学习CSS布局</span>
       </a>
     </div>
 
     <div id="menu">
-      <a class="home-link" href="/">Home</a>
-      <a href="toc.html">Table of Contents</a>
+      <a class="home-link" href="/">主页</a>
+      <a href="toc.html">目录</a>
     </div>
 
     <div id="container">
@@ -43,7 +43,7 @@
       <h1 class="content">position</h1>
 
       <p class="content">
-  In order to make more complex layouts, we need to discuss the <code>position</code> property. It has a bunch of possible values, and their names make no sense and are impossible to remember. Let's go through them one by one, but maybe you should bookmark this page too.
+  为了制作更多复杂的布局，我们需要讨论下 <code>position</code> 属性。它有很多可能的值，并且它们的名字很难以理解与记住。让我们先一个个的过一遍，同时你可能需要把这页作为书签。
 </p>
 
 <h2 class="content">
@@ -58,7 +58,7 @@
 <div class="elem">
   <span class="label">&lt;div class="static"></span>
   <p>
-    <code>static</code> is the default value. An element with <code>position: static;</code> is not positioned in any special way. A static element is said to be <em>not positioned</em> and an element with its position set to anything else is said to be <em>positioned</em>.
+     <code>static</code> 是默认值。任意 <code>position: static;</code> 的元素不会被特殊的定位。一个static元素表示它<em>不会被“positioned”</em>，一个position属性被设置为其他值的元素表示它<em>会被“positioned”</em>。
   </p>
   <span class="endlabel">&lt;/div></span>
 </div>
@@ -95,7 +95,7 @@
 <div class="relative1 elem">
   <span class="label">&lt;div class="relative1"></span>
   <p>
-    <code>relative</code> behaves the same as <code>static</code> unless you add some extra properties.
+     <code>relative</code> 表现的和 <code>static</code> 一样，除非你添加了一些额外的属性。
   </p>
   <span class="endlabel">&lt;/div></span>
 </div>
@@ -103,7 +103,7 @@
 <div class="relative2 elem elem-red">
   <span class="label">&lt;div class="relative2"></span>
   <p>
-    Setting the <code>top</code>, <code>right</code>, <code>bottom</code>, and <code>left</code> properties of a relatively-positioned element will cause it to be adjusted away from its normal position. Other content will not be adjusted to fit into any gap left by the element.
+    在一个相对定位（position属性的值为relative）的元素上设置 <code>top</code> 、 <code>right</code> 、 <code>bottom</code> 和 <code>left</code> 属性会使其偏离其正常位置。其他的元素则不会调整位置来弥补它偏离后剩下的空隙。
   </p>
   <span class="endlabel">&lt;/div></span>
 </div>
@@ -119,23 +119,24 @@
     right: 0;
     width: 200px;
     background-color: white;
+    z-index: 9999;
   }
 </style>
 
 <div class="fixed elem elem-green">
   <span class="label">&lt;div class="fixed"></span>
   <p>
-    Hello! Don't pay attention to me yet.
+    Hello！暂时不要太关注我哦。
   </p>
   <span class="endlabel">&lt;/div></span>
 </div>
 
 <p class="content">
-  A fixed element is positioned relative to the viewport, which means it always stays in the same place even if the page is scrolled. As with <code>relative</code>, the <code>top</code>, <code>right</code>, <code>bottom</code>, and <code>left</code> properties are used.
+  一个固定定位（position属性的值为fixed）元素会相对于视窗来定位，这意味着它会一直保持位置不变，即使窗口被滚动。和 <code>relative</code> 一样， <code>top</code> 、 <code>right</code> 、 <code>bottom</code> 和 <code>left</code> 属性会被使用。
 </p>
 
 <p class="content">
-  I'm sure you've noticed that fixed element in the lower-right hand corner of the page. I'm giving you permission to pay attention to it now. Here is the CSS that puts it there:
+  我相信你已经注意到页面上右下角的固定定位元素。你现在可以仔细看看它，这里有它所使用的CSS：
 </p>
 
 <div class="highlight"><pre><code class="css"><span class="nc">.fixed</span> <span class="p">{</span>
@@ -148,11 +149,11 @@
 </code></pre></div>
 
 <p class="content">
-  A fixed element does not leave a gap in the page where it would normally have been located.
+  一个固定定位元素不会保留它原本在页面应有的空隙。
 </p>
 
 <p class="content">
-  Mobile browsers have surprisingly shaky support for fixed. <a href="http://bradfrostweb.com/blog/mobile/fixed-position/">Learn more about the situation here</a>.
+  令人惊讶地是移动浏览器对fixed的支持很差。<a href="http://bradfrostweb.com/blog/mobile/fixed-position/">这里有相应的解决方案</a>.
 </p>
 
 <h2 class="content">
@@ -175,11 +176,11 @@
 </style>
 
 <p class="content">
-  <code>absolute</code> is the trickiest position value. <code>absolute</code> behaves like <code>fixed</code> except relative to <em>the nearest positioned ancestor</em> instead of relative to the viewport. If an absolutely-positioned element has no positioned ancestors, it uses the document body, and still moves along with page scrolling. Remember, a "positioned" element is one whose position is anything except <code>static</code>.
+   <code>absolute</code> 是最棘手的position值。 <code>absolute</code> 与 <code>fixed</code> 的表现类似，除了它不是相对于视窗而是相对于<em>最近的“positioned”祖先元素</em>。如果绝对定位（position属性的值为absolute）的元素没有“positioned”祖先元素，那么它是想对于文档的body元素，并且它会随着页面滚动而移动。记住一个“positioned”元素是指position值不是 <code>static</code> 的元素。
 </p>
 
 <p class="content">
-  Here is a simple example:
+  这里有一个简单的例子：
 </p>
 
 <div class="highlight"><pre><code class="css"><span class="nc">.relative</span> <span class="p">{</span>
@@ -199,12 +200,12 @@
 <div class="relative elem">
   <span class="label">&lt;div class="relative"></span>
   <p>
-    This element is relatively-positioned. If this element was <code>position: static;</code> its absolutely-positioned child would escape and would be positioned relative to the document body.
+    这个元素是相对定位的。如果它是 <code>position: static;</code> ，那么它的绝对定位子元素会跳过它直接相对于body元素定位。
   </p>
   <div class="absolute elem elem-red">
     <span class="label">&lt;div class="absolute"></span>
     <p>
-      This element is absolutely-positioned. It's positioned relative to its parent.
+      这个元素是绝对定位的。它相对于它的父元素定位。
     </p>
     <span class="endlabel">&lt;/div></span>
   </div>
@@ -212,33 +213,30 @@
 </div>
 
 <p class="content">
-  This stuff is tricky, but it's essential to creating great CSS layouts. On the next page we'll use <code>position</code> in a more practical example.
+  这部分比较难理解，但它是创造优秀布局所必需的知识。下一页我们会使用 <code>position</code> 做更具体的例子。
 </p>
 
       <div class="nav-wrapper">
 
         
-          <a class="nav prev" href="box-sizing.html">Previous</a>
+          <a class="nav prev" href="box-sizing.html">前一页</a>
         
 
         
-          <a class="nav next" href="position-example.html">Next</a>
+          <a class="nav next" href="position-example.html">下一页</a>
         
 
       </div>
 
       
         <footer>
-          <a href="https://github.com/incompl/csslayoutsite/issues">Issues / Feedback</a>
+          <a href="https://github.com/incompl/csslayoutsite/issues">意见 / 反馈</a>
         </footer>
       
 
     </div>
 
     <div id="share">
-      <div>
-        <a href="http://twitter.com/_gsmith">follow me</a> | <a href="http://training.bocoup.com/">training</a>
-      </div>
       <li>
         <iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Flearnlayout.com%2F&amp;send=false&amp;layout=button_count&amp;width=450&amp;show_faces=false&amp;font&amp;colorscheme=light&amp;action=like&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:110px; height:21px;" allowTransparency="true"></iframe>
       </li>
