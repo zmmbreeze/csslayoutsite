@@ -43,7 +43,7 @@
       <h1 class="content">position</h1>
 
       <p class="content">
-  为了制作更多复杂的布局，我们需要讨论下 <code>position</code> 属性。它有很多可能的值，并且它们的名字很难以理解与记住。让我们先一个个的过一遍，同时你可能需要把这页作为书签。
+  为了制作更多复杂的布局，我们需要讨论下 <code>position</code> 属性。它有一大堆的值，名字还都特抽象，别提有多难记了。让我们先一个个的过一遍，不过你最好还是把这页放到书签里。
 </p>
 
 <h2 class="content">
@@ -58,7 +58,7 @@
 <div class="elem">
   <span class="label">&lt;div class="static"></span>
   <p>
-     <code>static</code> 是默认值。任意 <code>position: static;</code> 的元素不会被特殊的定位。一个static元素表示它<em>不会被“positioned”</em>，一个position属性被设置为其他值的元素表示它<em>会被“positioned”</em>。
+     <code>static</code> 是默认值。任意 <code>position: static;</code> 的元素不会被特殊的定位。一个 static 元素表示它<em>不会被“positioned”</em>，一个 position 属性被设置为其他值的元素表示它<em>会被“positioned”</em>。
   </p>
   <span class="endlabel">&lt;/div></span>
 </div>
@@ -132,11 +132,11 @@
 </div>
 
 <p class="content">
-  一个固定定位（position属性的值为fixed）元素会相对于视窗来定位，这意味着它会一直保持位置不变，即使窗口被滚动。和 <code>relative</code> 一样， <code>top</code> 、 <code>right</code> 、 <code>bottom</code> 和 <code>left</code> 属性会被使用。
+  一个固定定位（position属性的值为fixed）元素会相对于视窗来定位，这意味着即便页面滚动，它还是会停留在相同的位置。和 <code>relative</code> 一样， <code>top</code> 、 <code>right</code> 、 <code>bottom</code> 和 <code>left</code> 属性都可用。
 </p>
 
 <p class="content">
-  我相信你已经注意到页面上右下角的固定定位元素。你现在可以仔细看看它，这里有它所使用的CSS：
+  我相信你已经注意到页面右下角的固定定位元素。你现在可以仔细看看它，这里有它所使用的CSS：
 </p>
 
 <div class="highlight"><pre><code class="css"><span class="nc">.fixed</span> <span class="p">{</span>
@@ -153,7 +153,7 @@
 </p>
 
 <p class="content">
-  令人惊讶地是移动浏览器对fixed的支持很差。<a href="http://bradfrostweb.com/blog/mobile/fixed-position/">这里有相应的解决方案</a>.
+  令人惊讶地是移动浏览器对 fixed 的支持很差。<a href="http://bradfrostweb.com/blog/mobile/fixed-position/">这里有相应的解决方案</a>.
 </p>
 
 <h2 class="content">
@@ -176,7 +176,7 @@
 </style>
 
 <p class="content">
-   <code>absolute</code> 是最棘手的position值。 <code>absolute</code> 与 <code>fixed</code> 的表现类似，除了它不是相对于视窗而是相对于<em>最近的“positioned”祖先元素</em>。如果绝对定位（position属性的值为absolute）的元素没有“positioned”祖先元素，那么它是想对于文档的body元素，并且它会随着页面滚动而移动。记住一个“positioned”元素是指position值不是 <code>static</code> 的元素。
+   <code>absolute</code> 是最棘手的position值。 <code>absolute</code> 与 <code>fixed</code> 的表现类似，除了它不是相对于视窗而是相对于<em>最近的“positioned”祖先元素</em>。如果绝对定位（position属性的值为absolute）的元素没有“positioned”祖先元素，那么它是相对于文档的 body 元素，并且它会随着页面滚动而移动。记住一个“positioned”元素是指p osition 值不是 <code>static</code> 的元素。
 </p>
 
 <p class="content">
@@ -219,7 +219,7 @@
       <div class="nav-wrapper">
 
         
-          <a class="nav prev" href="box-sizing.html">前一页</a>
+          <a class="nav prev" href="box-sizing.html">上一页</a>
         
 
         
